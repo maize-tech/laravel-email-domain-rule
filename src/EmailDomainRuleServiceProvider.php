@@ -1,6 +1,6 @@
 <?php
 
-namespace HFarm\EmailDomainRule;
+namespace Maize\EmailDomainRule;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

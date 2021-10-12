@@ -1,6 +1,6 @@
 <?php
 
-namespace HFarm\EmailDomainRule\Models;
+namespace Maize\EmailDomainRule\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

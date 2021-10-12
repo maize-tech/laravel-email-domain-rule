@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'email_domain_model' => HFarm\EmailDomainRule\Models\EmailDomain::class,
+    'email_domain_model' => Maize\EmailDomainRule\Models\EmailDomain::class,
 
     /*
     |--------------------------------------------------------------------------

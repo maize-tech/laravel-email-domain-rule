@@ -1,10 +1,10 @@
 <?php
 
-namespace HFarm\EmailDomainRule\Tests;
+namespace Maize\EmailDomainRule\Tests;
 
-use HFarm\EmailDomainRule\EmailDomainRule;
-use HFarm\EmailDomainRule\Models\EmailDomain;
 use Illuminate\Support\Facades\Validator;
+use Maize\EmailDomainRule\EmailDomainRule;
+use Maize\EmailDomainRule\Models\EmailDomain;
 
 class EmailDomainRuleTest extends TestCase
 {

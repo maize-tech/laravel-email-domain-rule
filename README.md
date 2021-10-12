@@ -2,10 +2,10 @@
 
 # Laravel Email Domain Rule
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/h-farm/laravel-email-domain-rule.svg?style=flat-square)](https://packagist.org/packages/h-farm/laravel-email-domain-rule)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/h-farm/laravel-email-domain-rule/run-tests?label=tests)](https://github.com/h-farm/laravel-email-domain-rule/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/h-farm/laravel-email-domain-rule/Check%20&%20fix%20styling?label=code%20style)](https://github.com/h-farm/laravel-email-domain-rule/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/h-farm/laravel-email-domain-rule.svg?style=flat-square)](https://packagist.org/packages/h-farm/laravel-email-domain-rule)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/maize-tech/laravel-email-domain-rule.svg?style=flat-square)](https://packagist.org/packages/maize-tech/laravel-email-domain-rule)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/maize-tech/laravel-email-domain-rule/run-tests?label=tests)](https://github.com/maize-tech/laravel-email-domain-rule/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/maize-tech/laravel-email-domain-rule/Check%20&%20fix%20styling?label=code%20style)](https://github.com/maize-tech/laravel-email-domain-rule/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/maize-tech/laravel-email-domain-rule.svg?style=flat-square)](https://packagist.org/packages/maize-tech/laravel-email-domain-rule)
 
 This package allows to define a subset of allowed email domains and validate any user registration form with a custom rule.
 
@@ -14,19 +14,19 @@ This package allows to define a subset of allowed email domains and validate any
 You can install the package via composer:
 
 ```bash
-composer require h-farm/laravel-email-domain-rule
+composer require maize-tech/laravel-email-domain-rule
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="HFarm\EmailDomainRule\EmailDomainRuleServiceProvider" --tag="email-domain-rule-migrations"
+php artisan vendor:publish --provider="Maize\EmailDomainRule\EmailDomainRuleServiceProvider" --tag="email-domain-rule-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="HFarm\EmailDomainRule\EmailDomainRuleServiceProvider" --tag="email-domain-rule-config"
+php artisan vendor:publish --provider="Maize\EmailDomainRule\EmailDomainRuleServiceProvider" --tag="email-domain-rule-config"
 ```
 
 This is the content of the published config file:
@@ -43,7 +43,7 @@ return [
     |
     */
 
-    'email_domain_model' => HFarm\EmailDomainRule\Models\EmailDomain::class,
+    'email_domain_model' => Maize\EmailDomainRule\Models\EmailDomain::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ To use the package, run the migration and fill in the table with a list of accep
 You can then just add the custom validation rule to validate, for example, a user registration form.
 
 ```php
-use HFarm\EmailDomainRule\EmailDomainRule;
+use Maize\EmailDomainRule\EmailDomainRule;
 use Illuminate\Support\Facades\Validator;
 
 $email = 'my-email@example.com';
@@ -104,8 +104,8 @@ If needed, you can optionally add wildcard domains to the `email_domains` databa
 The default wildcard character is an asterisk (`*`), but you can customize it within the `email_domain_wildcard` setting.
 
 ```php
-use HFarm\EmailDomainRule\EmailDomainRule;
-use HFarm\EmailDomainRule\Models\EmailDomain;
+use Maize\EmailDomainRule\EmailDomainRule;
+use Maize\EmailDomainRule\Models\EmailDomain;
 use Illuminate\Support\Facades\Validator;
 
 EmailDomain::create(['domain' => '*.example.com']);
@@ -130,7 +130,7 @@ You can also override the default `EmailDomain` model to add any additional fiel
 This can be useful when working with a multi-tenancy scenario in a single database system: in this case you can just add a `tenant_id` column to the migration and model classes, and apply a global scope to the custom model.
 
 ```php
-use HFarm\EmailDomainRule\EmailDomainRule as BaseEmailDomain;
+use Maize\EmailDomainRule\EmailDomainRule as BaseEmailDomain;
 use Illuminate\Database\Eloquent\Builder;
 
 class EmailDomain extends BaseEmailDomain

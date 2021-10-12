@@ -1,10 +1,10 @@
 <?php
 
-namespace HFarm\EmailDomainRule;
+namespace Maize\EmailDomainRule;
 
-use HFarm\EmailDomainRule\Models\EmailDomain;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Str;
+use Maize\EmailDomainRule\Models\EmailDomain;
 
 class EmailDomainRule implements Rule
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace HFarm\EmailDomainRule\Tests;
+namespace Maize\EmailDomainRule\Tests;
 
-use HFarm\EmailDomainRule\EmailDomainRuleServiceProvider;
+use Maize\EmailDomainRule\EmailDomainRuleServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
