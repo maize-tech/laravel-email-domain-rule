@@ -2,6 +2,13 @@
 
 All notable changes to `laravel-email-domain-rule` will be documented in this file.
 
+## 3.2.0 - 2024-04-05
+
+### What's Changed
+
+* UPDATE php8.3 by @enricodelazzari in https://github.com/maize-tech/laravel-email-domain-rule/pull/18
+* Laravel 11.x Compatibility by @enricodelazzari in https://github.com/maize-tech/laravel-email-domain-rule/pull/22
+
 ## 3.1.0 - 2023-02-13
 
 ### What's Changed
