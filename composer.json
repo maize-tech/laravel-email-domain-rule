@@ -19,17 +19,17 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/contracts": "^9.0|^10.0|^11.0",
-        "illuminate/database": "^9.0|^10.0|^11.0",
-        "illuminate/support": "^9.0|^10.0|^11.0",
+        "illuminate/contracts": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/database": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
         "spatie/laravel-package-tools": "^1.14.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.4",
         "nunomaduro/collision": "^6.0|^7.10.0|^8.1.1",
-        "orchestra/testbench": "^7.0|^8.0|^9.0",
-        "phpunit/phpunit": "^9.5|^10.5",
-        "vimeo/psalm": "^4.20|^5.22"
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.5|^10.5|^11.5.3",
+        "vimeo/psalm": "^4.20|^5.22|^6.6"
     },
     "autoload": {
         "psr-4": {
